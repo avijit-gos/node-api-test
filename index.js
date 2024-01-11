@@ -13,6 +13,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/api/product", require("./src/router/productRouter"));
+app.use("/api/user", require("./src/router/userRouter"));
 
 app.use(async (req, res, next) => {
   next(createError.NotFound("URL not found"));
